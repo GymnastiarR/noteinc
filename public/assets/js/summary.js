@@ -1,5 +1,8 @@
+
+const BASEURL = 'http://localhost/Noted/public/';
+
 function editNote(id){
-    document.location.assign(`http://localhost/Noted/public/summary/edit/${id}`);
+    document.location.assign( BASEURL + `summary/edit/${id}`);
 }
 
 const deleteNote = document.querySelector('.delete-note');
@@ -80,7 +83,7 @@ function checkList(e){
 
     let name = e.target.getAttribute('name');
 
-    xhr.open('GET', `http://localhost/Noted/public/summary/checkList/${name}/${e.target.value}`, true);
+    xhr.open('GET', BASEURL + `summary/checkList/${name}/${e.target.value}`, true);
     xhr.send();
 
 }
@@ -90,7 +93,7 @@ function editItem(e){
     let name = e.target.getAttribute('name');
     let value = e.target.innerText;
     const lists = document.querySelector('.lists');
-    $.post("http://localhost/Noted/public/summary/updateItem/", {id : name, isi : value}).done(function(data){
+    $.post(BASEURL + "summary/updateItem/", {id : name, isi : value}).done(function(data){
         lists.innerHTML = data;
     });
 
@@ -115,7 +118,7 @@ function deleteList(e){
     let name = e.target.getAttribute('name');
     console.log(e.target);
 
-    xhr.open('GET', `http://localhost/Noted/public/summary/deleteList/${name}`, true);
+    xhr.open('GET', BASEURL + `summary/deleteList/${name}`, true);
     xhr.send();
 
 }
@@ -134,14 +137,14 @@ $('section.lists').on('click', function(e){
 
 
     if(e.target.className == 'new-list-action'){
-        $.post("http://localhost/Noted/public/summary/newList", {content : $('#new-list-input').val()}).done(function(data){
+        $.post(BASEURL + "summary/newList", {content : $('#new-list-input').val()}).done(function(data){
             const lists = document.querySelector('.lists');
             lists.innerHTML = data;
         });
     }
 
     if(e.target.className == 'new-item-button'){
-        $.post("http://localhost/Noted/public/summary/newItem", {id_list : e.target.value, content: $('#judul-item').val()}).done(function(data){
+        $.post(BASEURL + "summary/newItem", {id_list : e.target.value, content: $('#judul-item').val()}).done(function(data){
             const lists = document.querySelector('.lists');
             lists.innerHTML = data;
         });
@@ -154,7 +157,7 @@ $('section.lists').on('click', function(e){
 
     if(e.target.className == "fa-solid fa-trash"){
         console.log(e.target.className);
-        $.post("http://localhost/Noted/public/summary/deleteItem", {id_item : e.target.getAttribute('name')}).done(function(data){
+        $.post( BASEURL + "summary/deleteItem", {id_item : e.target.getAttribute('name')}).done(function(data){
             const lists = document.querySelector('.lists');
             lists.innerHTML = data;
         });
