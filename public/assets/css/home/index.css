@@ -1,0 +1,328 @@
+/* START */
+
+body{
+    background-color: white;
+}
+
+main{
+    background-color: white;
+}
+
+section.one{
+    height: 700px;
+    background-image: url(../../img/webimage/isolated-shot-surprised.jpg);
+    background-position: top;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+div.text{
+    height: 500px;
+    width: 50%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Poppins";
+    margin: 30px;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+section.one button{
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.486);
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 80px;
+    color: white;
+    font-family: "Poppins";
+    transition: 0.5s;
+}
+
+section.one button:hover{
+    background-color: rgb(110, 2, 129);
+}
+
+/* ---------------------------------------------------------------------- */
+
+div.two{
+    display: flex;
+    position: absolute;
+    width: 60%;
+    justify-content: space-between;
+    top: 450px;
+    left: 20vw;
+}
+
+div.two div{
+    box-shadow: 0px 0px 25px 1px rgba(0,0,0,0.42);
+    background-color: #E7E9EB;
+    height: 400px;
+    width: 30%;
+    border-radius: 10px;
+    /* outline: 6px solid #E7E9EB;
+    border: 2px solid white; */
+}
+
+/* ---------------------------------------------------------------------- */
+
+section.three{
+    background-color: white;
+    padding-top:250px ;
+    display: flex;
+    /* padding-top: 400px;
+    height: 800px;
+    display: flex; */
+}
+
+div.left{
+    width: 50%;
+    text-align: right;
+}
+div.left img{
+    width: 70%;
+    border-radius: 100%;
+}
+div.right{
+    width: 50%;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    flex-direction: column;
+}
+
+div.right div{
+    width: 70%;
+}
+
+/* ---------------------------------------------------------------------- */
+
+section.four{
+    background-color: #0099ff;
+    margin-top: -5px;
+    font-family: "Poppins";
+    height: 550px;
+}
+
+section.four > div{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section.four h1{
+    margin: 50px;
+}
+
+div.form{
+    width: 100%;
+}
+
+div.form ul{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.form li{
+    width: 100%;
+    text-align: center;
+}
+
+
+div.form li.nama input{
+    width: 24%;
+    margin-right: 7px;
+}
+
+form li > input{
+    width: 50%;
+}
+
+form li input{
+    border-radius: 5px;
+    height: 35px;
+    border: none;
+    margin-bottom: 25px;
+    font-family: "Poppins";
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+li.sex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+li.sex input{
+    width: 100%;
+}
+
+div.form button{
+    background-color: blue;
+    color: white;
+    width: 110px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+
+/* ---------------------------------------------------------------------- */
+
+footer{
+    background-color: rgb(42, 39, 39);
+    height: 70px;
+}
+
+#carouselExampleIndicators{
+    display: none;
+}
+
+.svg1{
+    position: relative;
+    z-index: -9;
+}
+
+
+@media screen and (max-width : 1024px){
+    div.two{
+        width: 80%;
+        left: 10vw;
+    }
+    section.one{
+        background-size: auto 100%;
+    }
+    div.text{
+        width: 55%;
+    }
+}
+
+@media screen and (max-width : 850px){
+    /* section.one{
+        height: 1000px;
+        background-size: auto 100%;
+        background-position-y: -30px;
+    } */
+    div.text{
+        width: 70%;
+    }
+    
+    div.two{
+        width: 90%;
+        left: 5vw;
+    }
+
+    div.two div{
+        width: 32%;
+    }
+}
+
+@media screen and (max-width : 650px){
+
+    /* section.one{
+        height: 570px;
+        background-size: 1000px;
+    } */
+    div.text{
+        width: 90%;
+        height: 100%;
+    }
+    h1{
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+    section.one p{
+        color: white;
+    }
+
+    /*-------------------------------------------------------------------------*/
+
+    div.two{
+        display: none;
+    }
+
+    #carouselExampleIndicators{
+        display: block;
+    }
+
+    div.carousel-inner{
+        width: 90%;
+        left: 5vw;
+        height: auto;
+        display: flex;
+        text-align: center;
+    }
+
+    div.carousel-inner div{
+        color: black;
+        padding: 50px;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: rgb(211, 211, 211);
+        height: 400px;
+        border-radius: 10px;
+        text-align: center;
+        /* border: 3px solid rgb(52, 49, 49); */
+        /* outline: 8px solid rgb(211, 211, 211); */
+    }
+
+    button.carousel-control-next, button.carousel-control-prev{
+        color: black;
+    }
+
+    /*---------------------------------------------------------------------------------*/
+
+    section.three{
+        padding-top: 0px;
+        margin: 50px;
+        flex-direction: column;
+    }
+
+    div.left, div.right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    section.four > div{
+        width: 90%;
+    }
+
+    div.form li.nama input{
+        width: 46%;
+        margin-left:0.5%;
+    }
+    
+    form li > input{
+        width: 100%;
+    }
+
+    /*----------------------------------------------------------------------------------------*/
+
+
+}
