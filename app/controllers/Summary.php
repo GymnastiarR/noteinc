@@ -1,6 +1,7 @@
 <?php 
 
 class Summary extends Controller{
+
     public function __construct()
     {
         session_start();
@@ -10,6 +11,11 @@ class Summary extends Controller{
         }
     }
 
+    public function sideBar(){
+        $data['user'] = $this->model('User')->getUser($_SESSION['user']);
+        $this->view('template/sidebar', $data);
+    }
+
     public function index(){
         $data['notes'] = $this->model('Note_model')->getAllNote($_SESSION['user']);
         $data['lists'] = $this->model('List_model')->getAllList();
@@ -17,10 +23,10 @@ class Summary extends Controller{
         $data['judul'] = 'Summary';
         $data['css'] = BASEURL.'/assets/css/summary/index.css';
 
-        $this->view('Summary/template/header', $data);
-        $this->view('Summary/template/sidebar');
+        $this->view('template/header', $data);
+        $this->sideBar();
         $this->view('Summary/index', $data);
-        $this->view('Summary/template/footer');
+        $this->view('template/footer');
     }
 
     public function edit($id){
@@ -29,16 +35,10 @@ class Summary extends Controller{
         $data = $this->model('Note_model')->getNote($args);
         $data['css'] = BASEURL.'/assets/css/summary/edit.css';
 
-        $this->view('Summary/template/header', $data);
-        $this->view('Summary/template/sidebar');
+        $this->view('template/header', $data);
+        $this->sideBar();
         $this->view('Summary/edit', $data);
-        $this->view('Summary/template/footer');
-    }
-
-    public function friends(){
-        $this->view('Summary/template/header');
-        $this->view('Summary/template/sidebar');
-        $this->view('Summary/template/footer');
+        $this->view('template/footer');
     }
 
     public function save(){

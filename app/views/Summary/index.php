@@ -91,3 +91,4 @@
     </form>
     </div>
 </dialog>
+<script src="<?= BASEURL;?>/assets/js/summary.js"></script>
