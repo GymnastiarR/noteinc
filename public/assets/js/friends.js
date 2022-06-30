@@ -35,16 +35,35 @@ $(document).ready(function(){
             $.get(`http://localhost/Noted/public/friends/request/${e.target.value}`, (data) => {
                 $('.content').html(data);
             })
-        }    
+        }
+        
+        if(e.target.className == 'cancel-request'){
+            $.get(`http://localhost/Noted/public/friends/deleteFriendRequest/${e.target.value}`, (data) => {
+                e.target.parentElement.parentElement.classList.add('hide');
+                setTimeout(()=>{
+                    e.target.parentElement.parentElement.remove();
+                    console.log(document.querySelector('.pertemanan-diminta section').innerText);
+                    if(document.querySelector('.pertemanan-diminta section').innerText == ''){
+                        console.log("here");
+                        document.querySelector('.pertemanan-diminta section').innerHTML = `
+                        <div class="kosong">
+                            <h2>Tidak Permintaan Pertemanan Diminta</h2>
+                        </div>`;
+                    }
+                }, 1000)
+            })
+        }
         
     
     });
     
     $('main').on('keyup', (e) => {
         if(e.target.className == 'input-cari-teman'){
-            $.post(`http://localhost/Noted/public/friends/searchFriends/`, { keyword : e.target.value}).done((data)=>{
-                $('.hasil-pencarian').html(data);
-            });
+            if(e.target.value != ''){
+                $.post(`http://localhost/Noted/public/friends/searchFriends/`, { keyword : e.target.value}).done((data)=>{
+                    $('.hasil-pencarian').html(data);
+                });
+            }
         }
     })
 })

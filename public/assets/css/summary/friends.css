@@ -4,6 +4,7 @@ main{
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins";
+    font-size: 75%;
 }
 
 nav{
@@ -28,7 +29,8 @@ nav ul li{
 }
 
 .input-cari-teman{
-    border-radius: 8px;
+    border: 1px solid rgb(67, 67, 67);
+    border-radius: 5px;
     width: 200px;
     height: 35px;
     font-family: "Poppins";
@@ -55,6 +57,7 @@ h1{
     margin-bottom: 20px;
     font-size: 2em;
     font-weight: bold;
+    font-family: "Josefin Sans";
 }
 
 section.friends{
@@ -68,18 +71,22 @@ section.friends{
 }
 
 .card{
-    width: 32%;
+    width: 29%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: rgb(243, 249, 255);
     box-shadow: 0 0 3px 0.3px;
     border-radius: 8px;
     border: none;
-    height: 140px;
+    height: 160px;
     margin: 10px 0;
+    transform: scale(0);
     animation: open 1s;
+    animation-fill-mode: forwards;
+    animation-delay: time;
 }
+
 
 @keyframes open {
     0%{
@@ -90,13 +97,29 @@ section.friends{
     }
 }
 
+.hide{
+    animation: close 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes close {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
 .card h2{
+    line-height: 1.3em;
     font-size: 1.2em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .card h3{
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .card p{
@@ -115,7 +138,7 @@ p.date{
 }
 
 div.detail{
-    width: 70%;
+    width: 50%;
 }
 
 .card button{
@@ -136,6 +159,23 @@ div.detail{
 }
 
 .kosong h2{
-    font-size: 50px;
+    font-size: 30px;
     color: rgb(153, 153, 153);
+}
+
+@media screen and (max-width:1020px) {
+    .card{
+        width: 46%;
+    }
+    h1{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:660px) {
+    nav ul{
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0;
+    }
 }

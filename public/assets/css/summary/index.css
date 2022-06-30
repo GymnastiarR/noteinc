@@ -86,6 +86,7 @@ div.left, div.right{
 }
 
 .note p{
+    word-wrap: break-word;
     margin-bottom: 10px;
     line-height: 1.2em;
 }
@@ -211,6 +212,7 @@ li.new-item button{
     border-radius: 10px;
     border: none;
     align-items: center;
+    scale: 0;
     animation: open 1s;
 }
 
@@ -292,3 +294,28 @@ li.new-item button{
     background-color: rgb(90, 90, 247);
 }
 
+@media screen and (max-width:1000px) {
+
+    .property{
+        margin: 0;
+        width: 100%;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .content > section{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .note h2{
+        font-size: 1.3em;
+    }
+
+    .note p{
+        font-size: 0.8em;
+    }
+}

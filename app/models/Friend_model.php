@@ -60,6 +60,18 @@ class Friend_model{
     }
 
     public function request($id){
+        $this->db->query("SELECT * FROM friend_request WHERE id_receiver= $id AND id_sender = :id_sender");
+        $this->db->bind('id_sender', $_SESSION['user']['id']);
+        if($data = $this->db->single()){
+            return $data;
+        }
+
+        $this->db->query("SELECT * FROM friends WHERE id_teman = $id AND id_user = :id_user");
+        $this->db->bind('id_user', $_SESSION['user']['id']);
+        if($data = $this->db->single()){
+            return $data;
+        }
+
         $this->db->query("INSERT INTO friend_request VALUES ('', :id_sender, :id_receiver, now())");
         $this->db->bind("id_sender", $_SESSION['user']['id']);
         $this->db->bind('id_receiver', $id);

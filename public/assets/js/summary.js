@@ -62,13 +62,41 @@ const snippet = document.querySelectorAll('.snippet');
 
 snippet.forEach(function(e){
     let temp = e.textContent;
-    if(temp.length > 400){
-        temp = temp.substring(0, 400) + '......READ MORE';
+    if(temp.length > 300 && window.innerWidth > 810){
+        temp = temp.substring(0, 300) + '......';
+        e.textContent = temp;
     }
-    e.textContent = temp;
+    else{
+        temp = temp.substring(0, 150) + '......';
+        e.textContent = temp;   
+    }
 });
 
+window.addEventListener("resize",function(){
+    console.log(this.window.innerWidth);
+    if(window.innerWidth < 810){
+        snippet.forEach(function(e){
+            let temp = e.textContent;
+            if(temp.length > 200){
+                temp = temp.substring(0, 150) + '......';
+            }
+            e.textContent = temp;
+        });
+        
+    }else if(this.window.innerWidth >= 810){
+        snippet.forEach(function(e){
+            let temp = e.textContent;
+            if(temp.length > 400){
+                temp = temp.substring(0, 400) + '......';
+            }
+            e.textContent = temp;
+        });
+    }
+});
+
+
 function checkList(e){
+    console.log
     let xhr = new XMLHttpRequest();
     const lists = document.querySelector('.lists');
 
@@ -93,12 +121,24 @@ function editItem(e){
     let name = e.target.getAttribute('name');
     let value = e.target.innerText;
     const lists = document.querySelector('.lists');
-    $.post(BASEURL + "summary/updateItem/", {id : name, isi : value}).done(function(data){
-        lists.innerHTML = data;
-    });
+    $.post(BASEURL + "summary/updateItem/", {id : name, isi : value});
 
+    // .done(function(data){
+    //     lists.innerHTML = data;
+    // });
 
 }
+
+
+window.addEventListener("beforeunload", function(event) {
+    event.window.confirm("Simpan Perubahan ?")
+    // event.returnValue = function(){
+    //     let name = e.target.getAttribute('name');
+    //     let value = e.target.innerText;
+    //     const lists = document.querySelector('.lists');
+    //     $.post(BASEURL + "summary/updateItem/", {id : name, isi : value});
+    // }
+  });
 
 function deleteList(e){
 
@@ -165,6 +205,5 @@ $('section.lists').on('click', function(e){
 
 
 })
-
 
 

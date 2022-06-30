@@ -89,7 +89,7 @@ aside li{
 
 aside a{
     color: white;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-decoration: none;
     font-family: "Poppins";
 }
@@ -103,4 +103,44 @@ main{
     font-family: "Poppins";
     padding: 20px;
     box-sizing: border-box;
+}
+
+@media screen and (max-width:1350px) {
+    img{
+        width: 120px;
+        height: 120px;
+    }
+    aside a{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:980px) {
+    aside a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    img{
+        display: none;
+    }
+
+    aside a span{
+        display: none;
+    }
+
+    aside li{
+        border: none;
+    }
+
+    aside{
+        width: 10%;
+    }
+    main{
+        width: 90%;
+    }
 }
