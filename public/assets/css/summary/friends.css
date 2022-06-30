@@ -22,9 +22,26 @@ nav ul{
 }
 
 nav ul li{
-
+    cursor: pointer;
     color: white;
     font-size: 1.3em;
+}
+
+.input-cari-teman{
+    border-radius: 8px;
+    width: 200px;
+    height: 35px;
+    font-family: "Poppins";
+    margin-bottom: 15px;
+}
+
+div.hasil-pencarian{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: auto;
+    padding: 20px;
+    height: auto;
 }
 
 div.content{
@@ -32,11 +49,16 @@ div.content{
 }
 
 h1{
+    height: 40px;
+    width: 450px;
+    border-bottom: 1px solid rgb(103, 103, 103) ;
+    margin-bottom: 20px;
     font-size: 2em;
     font-weight: bold;
 }
 
 section.friends{
+    margin-bottom: 30px;
     border-radius: 10px;
     padding: 20px;
     border: 1px solid rgb(122, 122, 122);
@@ -55,6 +77,7 @@ section.friends{
     border-radius: 8px;
     border: none;
     height: 140px;
+    margin: 10px 0;
 }
 
 .card h2{
@@ -97,4 +120,9 @@ div.detail{
 
 .card button:hover{
     background-color: rgb(77, 77, 255);
+}
+
+.kosong h2{
+    font-size: 50px;
+    color: rgb(153, 153, 153);
 }

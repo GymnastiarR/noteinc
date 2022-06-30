@@ -50,6 +50,10 @@ class Database{
         $this->stmt->execute();
     }
 
+    public function abort(){
+        $this->dbh->query('KILL CONNECTION_ID()');
+    }
+
     public function resultSet()
     {
         $this->execute();

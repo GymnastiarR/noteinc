@@ -1,4 +1,4 @@
-<div class="content">
+
         <h1>Daftar Teman</h1>
         <section class="friends">
             <?php foreach($data['friends'] as $friend) : ?>
@@ -12,4 +12,3 @@
                 </div>
             <?php endforeach; ?>
         </section>
-    </div>
