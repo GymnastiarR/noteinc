@@ -4,12 +4,11 @@ class Database{
     protected $db_name = DB_NAME;
     protected $host = HOST_NAME;
 
-    private $dbh;
+    private static $dbh;
     private $stmt;
 
     public function __construct()
     {
-
         $dsn = "mysql:host=$this->host;dbname=$this->db_name";
         $option = [
             PDO::ATTR_PERSISTENT => true,
@@ -17,14 +16,16 @@ class Database{
         ];
 
         try{
-            $this->dbh = new PDO($dsn, 'root', '', $option);
+            if(self::$dbh == null){
+                self::$dbh = new PDO($dsn, 'root', '', $option);
+            }
         }catch(PDOException $e) {
             die($e->getMessage());
         }
     }
 
     public function query($query){
-        $this->stmt = $this->dbh->prepare($query);
+        $this->stmt = self::$dbh->prepare($query);
     }
 
     public function bind($param, $value, $type = null){

@@ -2,6 +2,8 @@
 
 class Summary extends Controller{
 
+    private $conn;
+
     public function __construct()
     {
         session_start();
@@ -18,8 +20,10 @@ class Summary extends Controller{
 
     public function index(){
         $data['notes'] = $this->model('Note_model')->getAllNote($_SESSION['user']);
-        $data['lists'] = $this->model('List_model')->getAllList();
-        $data['items'] = $this->model('List_model')->getAllItem();
+        $this->conn = $this->model('List_model');
+        $data['lists'] = $this->conn->getAllList();
+        $data['items'] = $this->conn->getAllItem();
+        
         $data['judul'] = 'Summary';
         $data['css'] = BASEURL.'/assets/css/summary/index.css';
 
