@@ -78,6 +78,16 @@ section.friends{
     border: none;
     height: 140px;
     margin: 10px 0;
+    animation: open 1s;
+}
+
+@keyframes open {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .card h2{
@@ -116,9 +126,12 @@ div.detail{
     color: white;
     cursor: pointer;
     font-family: "Poppins";
+    transition: 0.5s;
 }
 
 .card button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 1px rgb(74, 74, 74);
     background-color: rgb(77, 77, 255);
 }
 

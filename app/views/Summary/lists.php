@@ -10,7 +10,7 @@
                     <?php foreach($data['items'] as $item) :?>
                         <?php if($item['id_list'] == $list['id_list']) :?> 
                             <li class="item">
-                                <p onblur="editItem(event)" contenteditable="true" name="<?= $item['id_item'] ?>"><?= $item['content'] ?></p>
+                                <p onblur="editItem(event)" contenteditable="true" name="<?= $item['id_item'] ?>"><?php if($item['info'] == 'y') { ?> <del><?= $item['content'] ?></del><?php } else echo $item['content']?></p>
                                 <div class="item-property" onclick="checkList(event)">
                                     <i class="fa-solid fa-trash" name="<?= $item['id_item'] ?>"></i>
                                     <input value="<?= $item['info'] ?>" type="checkbox" onclick="checkList(event)" <?php if($item['info'] == 'y') echo 'checked' ?> name="<?= $item['id_item']?>">

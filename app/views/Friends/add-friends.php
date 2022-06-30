@@ -48,5 +48,3 @@
     </section>
 </div>
 
-<script src="<?= BASEURL?>/assets/js/friends.js"></script>
-

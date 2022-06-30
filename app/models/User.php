@@ -37,7 +37,6 @@ class User{
         }
 
 
-
         $password = password_hash($data['password'], PASSWORD_DEFAULT);
 
         $this->db->query("INSERT INTO user VALUES ('', :first_name, :last_name, :sex, :email, :username, :password)");

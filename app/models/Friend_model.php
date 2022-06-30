@@ -53,21 +53,17 @@ class Friend_model{
         $this->db->execute();
     }
 
-    // public function searchFriends($keyword){
-    //     $this->db->query("SELECT id, first_name, last_name, sex, username, img FROM user WHERE username LIKE '%$keyword%'");
-    //     // $this->db->bind('keyword', $keyword);
-    //     return $this->db->resultSet();
-    // }
+    public function searchFriends($keyword){
+        $this->db->query("SELECT id, first_name, last_name, sex, username, img FROM user WHERE username LIKE '%$keyword%'");
+        // $this->db->bind('keyword', $keyword);
+        return $this->db->resultSet();
+    }
 
-    // public function request($id){
-    //     $this->db->query("INSERT INTO friends_request VALUES ('', :id_sender, :id_receiver, now())");
-    //     $this->db->bind("id_sender", $_SESSION['user']['id']);
-    //     $this->db->bind('id_receiver', $id);
-    //     $this->db->execute();
-    // }
-
-    // public function addFriend($id){
-    //     $this->db->query("INSERT INTO friends VALUES WHERE ")
-    // }
+    public function request($id){
+        $this->db->query("INSERT INTO friend_request VALUES ('', :id_sender, :id_receiver, now())");
+        $this->db->bind("id_sender", $_SESSION['user']['id']);
+        $this->db->bind('id_receiver', $id);
+        $this->db->execute();
+    }
 
 }

@@ -62,6 +62,7 @@ div.search-box input:focus{
 
 
 .note{
+    cursor: pointer;
     position: relative;
     width:98%;
     margin-bottom: 10px;
@@ -70,6 +71,14 @@ div.search-box input:focus{
     border-radius: 5px;
     border: none;
 	box-sizing:border-box;
+    transition: 0.5s;
+}
+
+.note:hover{
+    background-color: white;
+    position: sticky;
+    z-index: 999;
+    transform: scale(1.1);
 }
 
 div.left, div.right{
@@ -202,6 +211,17 @@ li.new-item button{
     border-radius: 10px;
     border: none;
     align-items: center;
+    animation: open 1s;
+}
+
+@keyframes open{
+    0% {
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
 }
 
 .new-note > div{
