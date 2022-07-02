@@ -78,7 +78,7 @@
         </section>
     </div>
     <div class="new-note-button" onclick="showDialog()">
-        
+        <i class="fa-solid fa-circle-plus fa-2x"></i>
     </div>
 </main>
 <dialog class="new-note">

@@ -7,8 +7,8 @@
             <h1>Catat Dimanapun KapanPun</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique maxime eos animi numquam aspernatur? Itaque quos hic dignissimos rem, voluptates iusto nemo soluta. Numquam itaque velit eius ullam eos libero!</p>
             <div class="buttonGroup">
-                <a href="./home/login"><button>Login</button></a>
-                <a href=""><button>Register</button></a>
+                <a href="<?= BASEURL ?>/home/login/"><button>Login</button></a>
+                <a href="<?= BASEURL ?>/home/register/"><button>Register</button></a>
             </div>
         </div>
     </section>

@@ -125,7 +125,7 @@ main{
 }
 
 @media screen and (max-width:768px) {
-    img{
+    aside img{
         display: none;
     }
 

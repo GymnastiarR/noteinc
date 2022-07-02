@@ -13,6 +13,12 @@ class User{
         return $this->db->single();
     }
 
+    public function getUserById($id){
+        $this->db->query('SELECT * FROM user WHERE id = :id');
+        $this->db->bind('id', $id);
+        return $this->db->single();
+    }
+
     public function setAkun($data){
         
         $this->db->query('SELECT * FROM user WHERE email = :email');
@@ -21,7 +27,6 @@ class User{
         if($this->db->single()){
             return false;
         }
-
 
 
         $this->db->query('SELECT * FROM user WHERE username = :username');
@@ -39,7 +44,7 @@ class User{
 
         $password = password_hash($data['password'], PASSWORD_DEFAULT);
 
-        $this->db->query("INSERT INTO user VALUES ('', :first_name, :last_name, :sex, :email, :username, :password)");
+        $this->db->query("INSERT INTO user VALUES ('', :first_name, :last_name, :sex, :email, :username, :password, '/assets/img/user/default.png')");
 
         $this->db->bind('first_name', $data['first_name']);
         $this->db->bind('last_name', $data['last_name']);
@@ -52,6 +57,10 @@ class User{
         var_dump($data);
         return $this->db->rowCount();
 
+    }
+
+    public function getUserByIdJoinFriend(){
+        
     }
 
 }

@@ -27,6 +27,7 @@ class Home extends Controller{
 
     public function register(){
         $data['judul'] = 'Register';
+        $data['css'] = BASEURL . '/assets/css/home/register.css';
         $this->view('Home/template/header', $data);
         $this->view('Home/register');
         $this->view('Home/template/footer');

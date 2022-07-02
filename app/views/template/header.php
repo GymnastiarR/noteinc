@@ -12,4 +12,5 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato:wght@300&family=Poppins:wght@400;500&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+<script src="<?= BASEURL; ?>/assets/js/config.js "></script>
 <script src="<?= BASEURL; ?>/assets/js/jquery.js"></script>

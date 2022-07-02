@@ -52,4 +52,36 @@ class Note_model{
 
     }
 
+    public function getNoteRequestByIdReceiver(){
+        $this->db->query("SELECT note_request.id, content, title, note_request.id_note FROM note_request JOIN note ON note_request.id_note = note.id_note JOIN user ON note_request.id_receiver = user.id WHERE id_receiver = :id_user");
+        $this->db->bind('id_user', $_SESSION['user']['id']);
+        return $this->db->resultSet();
+    }
+
+    public function getNoteRequestByid($id){
+        $this->db->query("SELECT * FROM note_request WHERE id = :id");
+        $this->db->bind('id', $id);
+        return $this->db->resultSet();
+    }
+
+    public function getNoteRequestByidSender(){
+        $this->db->query("SELECT * FROM note_request JOIN note ON note_request.id_note = note.id_note JOIN user ON note_request.id_receiver = user.id WHERE id_sender = :id_user");
+        $this->db->bind('id_user', $_SESSION['user']['id']);
+        return $this->db->resultSet();
+    }
+
+    public function insertRequestNote($id_note, $id_friend){
+        $this->db->query("INSERT INTO note_request VALUES ('', :id_note, :id_sender, :id_receiver, now())");
+        $this->db->bind('id_note', $id_note);
+        $this->db->bind('id_receiver', $id_friend);
+        $this->db->bind('id_sender', $_SESSION['user']['id']);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
+    public function deleteRequestNoteById($id){
+        $this->db->query("DELETE FROM note_request WHERE id = :id");
+        $this->db->bind('id', $id);
+        $this->db->execute();
+    }
 }

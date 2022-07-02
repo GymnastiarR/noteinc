@@ -84,7 +84,7 @@ section.friends{
     transform: scale(0);
     animation: open 1s;
     animation-fill-mode: forwards;
-    animation-delay: time;
+    transition: 1s;
 }
 
 
@@ -145,7 +145,7 @@ div.detail{
     background-color: rgba(104, 104, 255, 0.807);
     border: none;
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     color: white;
     cursor: pointer;
     font-family: "Poppins";
@@ -173,9 +173,17 @@ div.detail{
 }
 
 @media screen and (max-width:660px) {
+    .kosong h2{
+        font-size: 12px;
+    }
+    
     nav ul{
         justify-content: space-evenly;
         width: 100%;
         margin: 0;
+    }
+
+    .card{
+        width: 100%;
     }
 }

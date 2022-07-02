@@ -1,6 +1,3 @@
-
-const BASEURL = 'http://localhost/Noted/public/';
-
 function editNote(id){
     document.location.assign( BASEURL + `summary/edit/${id}`);
 }
@@ -58,9 +55,8 @@ function showDialog(){
     dialogForm.showModal();
 }
 
-const snippet = document.querySelectorAll('.snippet');
 
-snippet.forEach(function(e){
+document.querySelectorAll('.snippet').forEach(function(e){
     let temp = e.textContent;
     if(temp.length > 300 && window.innerWidth > 810){
         temp = temp.substring(0, 300) + '......';
