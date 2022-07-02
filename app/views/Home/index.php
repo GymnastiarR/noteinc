@@ -69,25 +69,28 @@
         <h1>Register Now</h1>
 
             <div class="form">
-                <form action="<?= BASEURL; ?>/home/setAkun" method="post">
+                <form action="<?= BASEURL; ?>/home/registerInHome" method="post">
                     <ul>
                         <li class="nama">
-                            <input type="text" placeholder="First Name" name="first_name" value="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['first_name'];?>" >
-                            <input type="text" placeholder="Last Name" name="last_name"  value="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['last_name'];?>" >
+                            <input type="text" placeholder="First Name" name="first_name" value="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['cookies']['first_name'];?>" >
+                            <input type="text" placeholder="Last Name" name="last_name"  value="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['cookies']['last_name'];?>" >
                         </li>
                         <li>
-                            <?php if(isset($_SESSION['temp'])) : ?>
+                            <?php if(isset($_SESSION['temp']['email'])) : ?>
                                 <p>Email Sudah Terdaftar</p>
                             <?php endif ?>
-                            <input type="email" placeholder="Email" name="email"  value ="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['email'] ;?>">
+                            <input type="email" placeholder="Email" name="email"  value ="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['cookies']['email'] ;?>">
                         </li>
                         <li>
-                            <?php if(isset($usernameFalse)) : ?>
-                                <p>Email Sudah Terdaftar</p>
+                            <?php if(isset($_SESSION['temp']['username'])) : ?>
+                                <p>Username Sudah Terdaftar</p>
                             <?php endif ?>
-                            <input type="text" placeholder="username" name="username"  value="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['username'];?>">
+                            <input type="text" placeholder="username" name="username"  value="<?php if(isset($_SESSION['temp'])) echo $_SESSION['temp']['cookies']['username'];?>">
                         </li>
                         <li>
+                            <?php if(isset($_SESSION['temp']['password'])) : ?>
+                                <p>Password Tidak Sesuai</p>
+                            <?php endif ?>
                             <input type="password" placeholder="Password" name="password">
                         </li>
                         <li>

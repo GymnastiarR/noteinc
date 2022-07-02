@@ -25,6 +25,7 @@ class User{
         $this->db->bind('email', $data['email']);
 
         if($this->db->single()){
+            $_SESSION['temp']['email'] = true;
             return false;
         }
 
@@ -33,11 +34,13 @@ class User{
         $this->db->bind('username', $data['username']);
 
         if( $this->db->single()){
+            $_SESSION['temp']['username'] = true;
             return false;
         }
 
 
         if($data['password'] != $data['password2']){
+            $_SESSION['temp']['password'] = true;
             return false;
         }
 
@@ -60,7 +63,7 @@ class User{
     }
 
     public function getUserByIdJoinFriend(){
-        
+
     }
 
 }

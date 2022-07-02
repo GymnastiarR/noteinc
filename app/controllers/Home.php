@@ -33,14 +33,25 @@ class Home extends Controller{
         $this->view('Home/template/footer');
     }
 
-    public function setAkun(){
-        if($this->model('User')->setAkun($_POST) > 0){
+    public function registerInHome(){
+        var_dump($_POST);
+        $this->setAkun($_POST);
+        header('Location: '.BASEURL.'/home/');
+        exit;
+    }
+
+    public function registerInRegister(){
+        $this->setAkun($_POST);
+        header('Location: '.BASEURL.'/home/register/');
+    }
+
+    public function setAkun($data){
+        var_dump($data);
+        if($this->model('User')->setAkun($data) > 0){
             header('Location: '.BASEURL.'/home/login');
             exit;
         }
-        $_SESSION['temp'] = $_POST;
-        header('Location: '.BASEURL.'/home/');
-        exit;
+        $_SESSION['temp']['cookies'] = $_POST;
     }
 
     public function loginValidate(){
@@ -52,7 +63,7 @@ class Home extends Controller{
                 exit;
             }
         }
-        
+        $_SESSION['invalid-login'] = true;
         header('Location: '.BASEURL.'/home/login');
         exit;
     }

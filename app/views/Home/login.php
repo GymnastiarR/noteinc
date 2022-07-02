@@ -3,7 +3,7 @@
         <form action="<?= BASEURL; ?>/home/loginValidate" method="post">
             <ul>
                 <li>
-                <?php if(isset($salah)) : ?>
+                <?php if(isset($_SESSION['invalid-login'])) : ?>
                     <p>username/Password Yang Anda Masukkan Salah</p>
                 <?php endif ?>
                 </li>
@@ -19,7 +19,7 @@
             </ul>
         </form>
         <p>
-            Belum memiliki akun? Daftar akun <a href="../register">disini</a>.
+            Belum memiliki akun? Daftar akun <a href="<?= BASEURL ?>/home/register/">disini</a>.
         </p>
     </section>
-<?php
+<?php unset($_SESSION['invalid-login']); ?>
