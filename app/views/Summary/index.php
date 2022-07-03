@@ -14,6 +14,7 @@
 
     <div class="content">
         <section class="notes">
+            <?php if($data['notes'] != null) {?>
             <div class="left"> 
                 <?php for($i = 0 ; $i < sizeof($data['notes']) ; $i += 2) :?>
                     <div class="note" id="<?= $data['notes'][$i]['id_note'] ?>" onclick="editNote(<?= $data['notes'][$i]['id_note']?>)">
@@ -34,6 +35,9 @@
                     </div>
                 <?php endfor ?>
             </div>
+            <?php }else{ ?>
+                <h2>Kamu Tidak Memiliki Catatan</h2>
+            <?php } ?>
         </section>
         </form>
         <section class="lists">
@@ -82,12 +86,14 @@
     </div>
 </main>
 <dialog class="new-note">
-    <div class="close"><i class="fa-solid fa-x fa-lg"></i></div>
     <div>
     <form action="<?= BASEURL;?>/summary/newNote/" method="post">
         <input type="text" name="judul" placeholder="Judul....">
         <textarea name="isi" id="" cols="30" rows="10" placeholder="Masukkan Isi....."></textarea>
-        <button>Simpan</button>
+        <div class="button-group-note">
+            <button>Simpan</button>
+            <button class="cancel-save-note">Batal</button>
+        </div>
     </form>
     </div>
 </dialog>

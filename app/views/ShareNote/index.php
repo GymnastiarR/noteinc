@@ -8,12 +8,13 @@
     </nav>
     <div class="content">
     <section class="notes">
-
+        <?php if($data['notes'] != null) {?>
             <div class="left"> 
                 <?php for($i = 0 ; $i < sizeof($data['notes']) ; $i += 3) :?>
                     <div class="note">
                         <h2><?= $data['notes'][$i]['title']?></h2>
                         <p class="snippet"><?= $data['notes'][$i]['content']?></p>
+                        <p>From : <?=($data['notes'][$i]['username']) ?></p>
                         <button type="button" class="save-note" value="<?= $data['notes'][$i]['id_note']?>">Simpan Catatan</button>
                         <input class="note-sign" type="hidden" style="display:none" value="<?= $data['notes'][$i]['id'] ?>">
                     </div>
@@ -25,6 +26,7 @@
                     <div class="note">
                         <h2><?= $data['notes'][$i]['title']?></h2>
                         <p class="snippet"><?= $data['notes'][$i]['content']?></p>
+                        <p>From : <?=($data['notes'][$i]['username']) ?></p>
                         <button type="button" class="save-note" value="<?= $data['notes'][$i]['id_note']?>">Simpan Catatan</button>
                         <input class="note-sign" type="hidden" style="display:none" value="<?= $data['notes'][$i]['id'] ?>">
                     </div>
@@ -36,11 +38,15 @@
                     <div class="note">
                         <h2><?= $data['notes'][$i]['title']?></h2>
                         <p class="snippet"><?= $data['notes'][$i]['content']?></p>
+                        <p>From : <?=($data['notes'][$i]['username']) ?></p>
                         <button type="button" class="save-note" value="<?= $data['notes'][$i]['id_note']?>">Simpan Catatan</button>
                         <input class="note-sign" type="hidden" style="display:none" value="<?= $data['notes'][$i]['id'] ?>">
                     </div>
                 <?php endfor ?> 
             </div>
+        <?php } else{?>
+                <h2>Tidak Ada Yang Mengirim Catatan</h2>
+        <?php } ?>
             <script>
                     document.querySelectorAll('.snippet').forEach(function(e){
                         let temp = e.textContent;

@@ -50,10 +50,6 @@ class Summary extends Controller{
         $this->edit($_POST['simpan']);
     }
 
-    public function settings(){
-        
-    }
-
     public function deleteNote(){
         if($_POST == null){
             header("Location: ".BASEURL."/summary/");

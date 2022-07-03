@@ -15,7 +15,7 @@ class ShareNote extends Controller{
     }
 
     public function index(){
-        $data['user'] = $this->model('User')->getUser($_SESSION['user']);
+        // $data['user'] = $this->model('User')->getUser($_SESSION['user']);
         $data['css'] = BASEURL.'/assets/css/share-note/index.css';
         $data['notes'] = $this->model('Note_model')->getNoteRequestByIdReceiver();
 
@@ -63,7 +63,6 @@ class ShareNote extends Controller{
         $data['isi'] = $temp['content'];
         $this->model('Note_model')->setNote($data);
         $this->model('Note_model')->deleteRequestNoteById($_POST['id']);
-        var_dump($_POST['id']);
         $this->pendingNote();
     }
 

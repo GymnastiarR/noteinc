@@ -180,7 +180,8 @@ $('section.lists').on('click', function(e){
     }
 
     if(e.target.className == 'new-item-button'){
-        $.post(BASEURL + "summary/newItem", {id_list : e.target.value, content: $('#judul-item').val()}).done(function(data){
+
+        $.post(BASEURL + "summary/newItem", {id_list : e.target.value, content: e.target.previousElementSibling.value}).done(function(data){
             const lists = document.querySelector('.lists');
             lists.innerHTML = data;
         });

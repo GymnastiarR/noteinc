@@ -53,7 +53,7 @@ class Note_model{
     }
 
     public function getNoteRequestByIdReceiver(){
-        $this->db->query("SELECT note_request.id, content, title, note_request.id_note FROM note_request JOIN note ON note_request.id_note = note.id_note JOIN user ON note_request.id_receiver = user.id WHERE id_receiver = :id_user");
+        $this->db->query("SELECT note_request.id, content, title, note_request.id_note, username FROM note_request JOIN note ON note_request.id_note = note.id_note JOIN user ON note_request.id_sender = user.id WHERE id_receiver = :id_user");
         $this->db->bind('id_user', $_SESSION['user']['id']);
         return $this->db->resultSet();
     }

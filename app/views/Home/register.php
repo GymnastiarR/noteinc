@@ -1,5 +1,4 @@
 <main>
-    <?php var_dump($_SESSION['temp']) ?>
     <form action="<?= BASEURL?>/home/registerInRegister" method="post">
         <h1>Register</h1>
         <ul>

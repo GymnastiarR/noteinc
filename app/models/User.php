@@ -13,6 +13,12 @@ class User{
         return $this->db->single();
     }
 
+    public function getUserByEmail($email){
+        $this->db->query("SELECT * FROM user WHERE email = :email");
+        $this->db->bind('email', $email);
+        return $this->db->single();
+    }
+
     public function getUserById($id){
         $this->db->query('SELECT * FROM user WHERE id = :id');
         $this->db->bind('id', $id);
@@ -57,9 +63,18 @@ class User{
         $this->db->bind('sex', $data['gender']);
 
         $this->db->execute();
-        var_dump($data);
         return $this->db->rowCount();
 
+    }
+
+    public function updateUser($data){
+        $this->db->query("UPDATE user SET first_name = :first_name , last_name = :last_name , username = :username, email = :email WHERE id = :id");
+        $this->db->bind('first_name', $data['first_name']);
+        $this->db->bind('last_name', $data['last_name']);
+        $this->db->bind('username', $data['username']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('id', $_SESSION['user']['id']);
+        $this->db->execute();
     }
 
     public function getUserByIdJoinFriend(){

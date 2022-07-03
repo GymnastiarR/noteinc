@@ -86,6 +86,16 @@ nav ul li{
     height: 20px;
 }
 
+h3.title{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+h3.to{
+    font-size: 1em;
+    font-weight: bold;
+}
+
 .selected-friends{
     /* border: 1px solid black;
     border-radius: 5px; */
@@ -129,6 +139,10 @@ button{
 
 @media screen and (max-width:720px) {
     .card{
+        width: 100%;
+    }
+
+    .notes > div{
         width: 100%;
     }
 }
