@@ -46,7 +46,6 @@ class Home extends Controller{
     }
 
     public function setAkun($data){
-        var_dump($data);
         if($this->model('User')->setAkun($data) > 0){
             header('Location: '.BASEURL.'/home/login');
             exit;

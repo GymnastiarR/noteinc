@@ -49,10 +49,11 @@ class List_model{
     }
 
     public function deleteList($id){
-        $this->db->query("DELETE FROM list WHERE id_list = :id_list");
+        $this->db->query("DELETE FROM list WHERE id_list = :id_list AND id_user = :id_user");
         $this->db->bind('id_list', $id);
+        $this->db->bind('id_user', $_SESSION['user']['id']);
         $this->db->execute();
-        $this->db->rowCount();
+        return $this->db->rowCount();
     }
 
     public function newList($value){

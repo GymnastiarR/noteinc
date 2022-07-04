@@ -8,10 +8,12 @@ class Settings extends Controller{
             header('Location: '.BASEURL);
         }
     }
+    
     public function sideBar(){
         $data['user'] = $this->model('User')->getUserById($_SESSION['user']['id']);
         $this->view('template/sidebar', $data);
     }
+
     public function index()
     {
         $data['css'] = BASEURL . '/assets/css/settings/index.css';

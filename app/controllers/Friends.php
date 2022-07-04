@@ -12,7 +12,7 @@ class Friends extends Controller{
     }
 
     public function sideBar(){
-        $data['user'] = $this->model('User')->getUser($_SESSION['user']);
+        $data['user'] = $this->model('User')->getUserById($_SESSION['user']['id']);
         $this->view('template/sidebar', $data);
     }
 

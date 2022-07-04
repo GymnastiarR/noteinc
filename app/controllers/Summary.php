@@ -14,7 +14,7 @@ class Summary extends Controller{
     }
 
     public function sideBar(){
-        $data['user'] = $this->model('User')->getUser($_SESSION['user']);
+        $data['user'] = $this->model('User')->getUserById($_SESSION['user']['id']);
         $this->view('template/sidebar', $data);
     }
 
@@ -37,12 +37,19 @@ class Summary extends Controller{
         $args['id_note'] = $id;
         $args['id_user'] = $_SESSION['user']['id'];
         $data = $this->model('Note_model')->getNote($args);
-        $data['css'] = BASEURL.'/assets/css/summary/edit.css';
+        if($data['id_user'] == $args['id_user']){
+            $data['css'] = BASEURL.'/assets/css/summary/edit.css';
 
-        $this->view('template/header', $data);
-        $this->sideBar();
-        $this->view('Summary/edit', $data);
-        $this->view('template/footer');
+            $this->view('template/header', $data);
+            $this->sideBar();
+            $this->view('Summary/edit', $data);
+            $this->view('template/footer');
+        }
+        else{
+            $_SESSION['invalid']['note'] = true;
+            $this->index();
+        }
+
     }
 
     public function save(){
@@ -80,8 +87,12 @@ class Summary extends Controller{
     }
 
     public function deleteList($id){
-        $this->model('List_model')->deleteList($id);
-        $this->renderList();
+        if($this->model('List_model')->deleteList($id) > 0){
+            $this->renderList();
+        }
+        else{
+            $this->index();
+        }
     }
 
     public function newList(){
