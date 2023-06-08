@@ -1,0 +1,58 @@
+main{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 95%;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Poppins";
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+}
+
+textarea{
+    width: 100%;
+    height: 80vh;
+    font-family: "Poppins";
+    font-size: 1em;
+}
+
+.button-group{
+    display: flex;
+    text-align: center;
+}
+
+.save, a.exit{
+    width: 80px;
+    height: 30px;
+    margin-right:10px;
+    color: white;
+    border: none;
+    font-family: "Poppins";
+}
+
+a.exit{
+    display: inline-block;
+    background-color: red;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.save{
+    background-color: blue;
+}

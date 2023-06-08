@@ -1,0 +1,148 @@
+main{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-size: 75%;
+}
+
+nav{
+    background-color: rgb(57, 57, 57);
+    height: 70px;
+    box-sizing: border-box;
+}
+
+nav ul{
+    margin-left: 20px;
+    height: 100%;
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    cursor: pointer;
+    color: white;
+    font-size: 1.3em;
+}
+
+.container{
+    margin-bottom: 20px;
+}
+
+#select{
+    opacity: 0.5;
+}
+
+
+.notes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.notes > div{
+    width: 33%;
+}
+
+
+.note{
+    cursor: pointer;
+    position: relative;
+    width:98%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px 0.5px rgb(42, 40, 40);
+    padding: 14px;
+    border-radius: 5px;
+    border: none;
+	box-sizing:border-box;
+    transition: 0.5s;
+    flex-wrap: wrap;
+}
+
+/* div.left, div.right{
+    width: 50%;
+} */
+
+.note p{
+    word-wrap: break-word;
+    margin-bottom: 10px;
+    line-height: 1.2em;
+}
+
+.note h2{
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.note input{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+h3.title{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+h3.to{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.selected-friends{
+    /* border: 1px solid black;
+    border-radius: 5px; */
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.selected-friends h2{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.selected-friends ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selected-friends li{
+    margin:0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.selected-friends h3{
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+button{
+    color: white;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    font-family: "Poppins";
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(113, 113, 255);
+}
+
+@media screen and (max-width:720px) {
+    .card{
+        width: 100%;
+    }
+
+    .notes > div{
+        width: 100%;
+    }
+}
