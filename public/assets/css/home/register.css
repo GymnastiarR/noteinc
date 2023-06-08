@@ -1,6 +1,10 @@
 /* STRAT */
 
+<<<<<<< HEAD
 body {
+=======
+body{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     background-color: rgb(56, 53, 53);
     display: flex;
     align-items: center;
@@ -8,12 +12,20 @@ body {
     font-family: "Poppins";
 }
 
+<<<<<<< HEAD
 h1 {
+=======
+h1{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     font-size: 2.5em;
     font-weight: bolder;
 }
 
+<<<<<<< HEAD
 main {
+=======
+main{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 40vw;
     height: 80vh;
     background-color: white;
@@ -27,7 +39,11 @@ main {
     align-items: center;
 }
 
+<<<<<<< HEAD
 form {
+=======
+form{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,7 +52,11 @@ form {
     align-items: center;
 }
 
+<<<<<<< HEAD
 ul {
+=======
+ul{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     height: 80%;
     width: 80%;
     display: flex;
@@ -44,7 +64,11 @@ ul {
     justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
 li {
+=======
+li{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -52,43 +76,74 @@ li {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 li.sex {
     flex-direction: row;
 }
 
 input {
+=======
+li.sex{
+    flex-direction: row;
+}
+
+input{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 100%;
     height: 40px;
     border-radius: 10px;
     border: 1px solid rgb(81, 81, 81);
+<<<<<<< HEAD
     padding: 2px 12px;
 }
 
 div {
+=======
+}
+
+div{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     display: flex;
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 div input {
     width: 49%;
 }
 
 div.sex {
+=======
+div input{
+    width: 49%;
+}
+
+div.sex{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+<<<<<<< HEAD
 input[type=radio] {
+=======
+input[type = radio]{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 30px;
     height: 30px;
 }
 
+<<<<<<< HEAD
 button {
+=======
+button{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     background-color: blue;
     color: white;
     font-family: "Poppins";
     height: 40px;
+<<<<<<< HEAD
     width: 100px;
     border-radius: 5px;
     border: none;
@@ -101,4 +156,9 @@ button {
         width: 80vw;
     }
 
+=======
+    width: 100px ;
+    border-radius: 5px;
+    border: none;
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
 }

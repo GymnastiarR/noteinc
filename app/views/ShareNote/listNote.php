@@ -41,6 +41,7 @@
                     </div>
                 <?php endfor ?> 
             </div>
+<<<<<<< HEAD
                       <script>
                     document.querySelectorAll('.snippet').forEach(function(e){
                         let temp = e.textContent;
@@ -54,6 +55,8 @@
                         }
                     });
             </script>
+=======
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         </section>
         <!-- <h1>Teman Yang dipilih</h1>
         <section class="friends">

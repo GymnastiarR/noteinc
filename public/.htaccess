@@ -3,6 +3,9 @@ Options -Multiviews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
 RewriteRule ^(.*)$ index.php?url=$1 [L]
 

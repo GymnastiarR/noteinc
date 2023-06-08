@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 
+<<<<<<< HEAD
 html,
 body,
 div,
@@ -126,10 +127,55 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+=======
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
 }
 
 /* START */
 
+<<<<<<< HEAD
 body {
   display: flex;
 }
@@ -223,4 +269,100 @@ main {
   main {
     width: 90%;
   }
+=======
+body{
+    display: flex;
+}
+
+aside{
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding: 80px 20px;
+    height: 100vh;
+    width: 20%;
+    background-color: rgb(42, 41, 41);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+aside ul{
+    width: 100%;
+}
+
+aside li{
+    width: 100%;
+    margin-bottom:15px ;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+aside a{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+
+aside i{
+    margin-right:7px ;
+}
+
+main{
+    width: 80%;
+    font-family: "Poppins";
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:1350px) {
+    img{
+        width: 120px;
+        height: 120px;
+    }
+    aside a{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:980px) {
+    aside a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    aside img{
+        display: none;
+    }
+
+    aside a span{
+        display: none;
+    }
+
+    aside li{
+        border: none;
+    }
+
+    aside{
+        width: 10%;
+    }
+    main{
+        width: 90%;
+    }
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
 }

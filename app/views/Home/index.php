@@ -5,7 +5,11 @@
     <section class="one">
         <div class="text">
             <h1>Catat Dimanapun KapanPun</h1>
+<<<<<<< HEAD
             <p>Jadikan aktivitasmu lebih teratur dengan todo list dan catat apapun yang kamu perlukan segera tanpa kendala serta bagikan bersama teman</p>
+=======
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique maxime eos animi numquam aspernatur? Itaque quos hic dignissimos rem, voluptates iusto nemo soluta. Numquam itaque velit eius ullam eos libero!</p>
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
             <div class="buttonGroup">
                 <a href="<?= BASEURL ?>/home/login/"><button>Login</button></a>
                 <a href="<?= BASEURL ?>/home/register/"><button>Register</button></a>
@@ -14,6 +18,7 @@
     </section>
     <div class="two">
         <div>
+<<<<<<< HEAD
             <i class="fa-solid fa-user-group fa-8x"></i>
             <h2 style="font-family: 'Poppins'; font-weight:bold; font-size:1.5em;">Fitur Pertemanan</h2>
             <p style="font-family: 'Poppins'; font-size:1em; text-align:center;">Tambah teman untuk mempermudahkanmu berbagi catatan</p>
@@ -27,6 +32,15 @@
             <i class="fa-solid fa-globe fa-8x"></i>
             <h2>Akses Dimanapun</h2>
             <p>Dapatkan kemudahan untuk mengakses catatan yang kamu miliki di perangkat apapun</p>
+=======
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+            
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         </div>
     </div>
 
@@ -38,6 +52,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
+<<<<<<< HEAD
                 <div>
                     <i class="fa-solid fa-user-group fa-8x"></i>
                     <h2 style="font-family: 'Poppins'; font-weight:bold; font-size:1.5em;">Fitur Pertemanan</h2>
@@ -57,6 +72,14 @@
                     <h2>Akses Dimanapun</h2>
                     <p>Dapatkan kemudahan untuk mengakses catatan yang kamu miliki di perangkat apapun</p>
                 </div>
+=======
+                <h1>Akses Dimanapun</h1>
+            </div>
+            <div class="carousel-item">
+                <h1>Akses Dengan berbagai Perangkat</h1>
+            </div>
+            <div class="carousel-item">
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -75,8 +98,13 @@
         </div>
         <div class="right">
             <div>
+<<<<<<< HEAD
                 <h1>Catat Apapun</h1>
                 <p>Luangkan waktu dan mulailah mencatat yang kamu perlukan dengan projekin. Dapatkan berbagai kemudahan dalam mencatat dimanapun dengan perangkat apapun secara gratis</p>
+=======
+                <h1>Lorem ipsum </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit animi, aperiam totam eius aliquid atque necessitatibus. Asperiores ex, accusamus magni distinctio aliquam aliquid totam fugit enim, corrupti libero atque nulla!</p>
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
             </div>
         </div>
     </section>

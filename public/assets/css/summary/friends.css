@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 main {
+=======
+main{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -7,13 +11,21 @@ main {
     font-size: 75%;
 }
 
+<<<<<<< HEAD
 nav {
+=======
+nav{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     background-color: rgb(57, 57, 57);
     height: 70px;
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 nav ul {
+=======
+nav ul{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     margin-left: 20px;
     height: 100%;
     display: flex;
@@ -22,13 +34,21 @@ nav ul {
     align-items: center;
 }
 
+<<<<<<< HEAD
 nav ul li {
+=======
+nav ul li{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     cursor: pointer;
     color: white;
     font-size: 1.3em;
 }
 
+<<<<<<< HEAD
 .input-cari-teman {
+=======
+.input-cari-teman{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     border: 1px solid rgb(67, 67, 67);
     border-radius: 5px;
     width: 200px;
@@ -37,7 +57,11 @@ nav ul li {
     margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 div.hasil-pencarian {
+=======
+div.hasil-pencarian{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -46,6 +70,7 @@ div.hasil-pencarian {
     height: auto;
 }
 
+<<<<<<< HEAD
 div.content {
     padding: 20px;
 }
@@ -54,13 +79,27 @@ h1 {
     height: 40px;
     width: 450px;
     border-bottom: 1px solid rgb(103, 103, 103);
+=======
+div.content{
+    padding: 20px;
+}
+
+h1{
+    height: 40px;
+    width: 450px;
+    border-bottom: 1px solid rgb(103, 103, 103) ;
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     margin-bottom: 20px;
     font-size: 2em;
     font-weight: bold;
     font-family: "Josefin Sans";
 }
 
+<<<<<<< HEAD
 section.friends {
+=======
+section.friends{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     margin-bottom: 30px;
     border-radius: 10px;
     padding: 20px;
@@ -70,7 +109,11 @@ section.friends {
     justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
 .card {
+=======
+.card{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 29%;
     display: flex;
     align-items: center;
@@ -87,31 +130,52 @@ section.friends {
     transition: 1s;
 }
 
+<<<<<<< HEAD
 @keyframes open {
     0% {
         transform: scale(0);
     }
 
     100% {
+=======
+
+@keyframes open {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         transform: scale(1);
     }
 }
 
+<<<<<<< HEAD
 .hide {
+=======
+.hide{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     animation: close 1s;
     animation-fill-mode: forwards;
 }
 
 @keyframes close {
+<<<<<<< HEAD
     0% {
         transform: scale(1);
     }
 
     100% {
+=======
+    0%{
+        transform: scale(1);
+    }
+    100%{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         transform: scale(0);
     }
 }
 
+<<<<<<< HEAD
 .card h2 {
     line-height: 1.3em;
     font-size: 1.2em;
@@ -133,10 +197,35 @@ p.date {
 
 .card img {
     margin: 0 10px;
+=======
+.card h2{
+    line-height: 1.3em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card h3{
+    margin: 10px 0;
+}
+
+.card p{
+    margin: 5px 0;
+}
+
+p.date{
+    font-size: 10px;
+}
+
+.card img{
+
+    margin:0 10px;
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     width: 80px;
     height: 80px;
 }
 
+<<<<<<< HEAD
 div.detail {
     width: 50%;
     display: flex;
@@ -146,6 +235,13 @@ div.detail {
 }
 
 .card button {
+=======
+div.detail{
+    width: 50%;
+}
+
+.card button{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     background-color: rgba(104, 104, 255, 0.807);
     border: none;
     border-radius: 5px;
@@ -156,39 +252,71 @@ div.detail {
     transition: 0.5s;
 }
 
+<<<<<<< HEAD
 .card button:hover {
+=======
+.card button:hover{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     transform: scale(1.1);
     box-shadow: 0 0 3px 1px rgb(74, 74, 74);
     background-color: rgb(77, 77, 255);
 }
 
+<<<<<<< HEAD
 .kosong h2 {
+=======
+.kosong h2{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     font-size: 30px;
     color: rgb(153, 153, 153);
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1020px) {
     .card {
         width: 46%;
     }
 
     h1 {
+=======
+@media screen and (max-width:1020px) {
+    .card{
+        width: 46%;
+    }
+    h1{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         width: 100%;
     }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 660px) {
     .kosong h2 {
         font-size: 12px;
     }
 
     nav ul {
+=======
+@media screen and (max-width:660px) {
+    .kosong h2{
+        font-size: 12px;
+    }
+    
+    nav ul{
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         justify-content: space-evenly;
         width: 100%;
         margin: 0;
     }
 
+<<<<<<< HEAD
     .card {
         width: 100%;
     }
 }
+=======
+    .card{
+        width: 100%;
+    }
+}
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d

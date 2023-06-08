@@ -10,7 +10,6 @@ class App
     public function __construct()
     {
         $url = $this->parseUrl();
-        // var_dump($url);
         if ($url != null) {
             if (file_exists('../app/controllers/' . $url[0] . '.php')) {
                 $this->controller = $url[0];
@@ -31,7 +30,6 @@ class App
         }
         if (!empty($url)) {
             $this->params = array_values($url);
-            // var_dump($this->params);
         }
 
         call_user_func_array([$this->controller, $this->method], $this->params);

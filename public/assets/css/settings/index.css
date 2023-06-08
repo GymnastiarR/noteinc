@@ -113,9 +113,3 @@ button:hover {
     width: 180px;
     height: 180px;
 }
-
-@media screen and (max-width:900px) {
-    form {
-        width: 95%;
-    }
-}

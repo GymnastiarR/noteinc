@@ -3,7 +3,10 @@
 body{
     background-color: white;
     overflow-x:hidden;
+<<<<<<< HEAD
   	font-family:"Poppins";
+=======
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
 }
 
 main{
@@ -75,14 +78,18 @@ div.two div{
     height: 400px;
     width: 30%;
     border-radius: 10px;
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+=======
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
     /* outline: 6px solid #E7E9EB;
     border: 2px solid white; */
 }
 
+<<<<<<< HEAD
 i{
     color: rgb(53, 53, 53);
 }
@@ -106,6 +113,8 @@ div.two h2, .carousel-inner > div > div h2{
     justify-content: space-evenly;
 }
 
+=======
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
 /* ---------------------------------------------------------------------- */
 
 section.three{
@@ -328,7 +337,11 @@ footer{
 
     div.carousel-inner div{
         color: black;
+<<<<<<< HEAD
         padding: 0 10px;
+=======
+        padding: 50px;
+>>>>>>> 8cc2ec5a25b3dd018acfdede28f1fd70b909961d
         box-sizing: border-box;
         width: 100%;
         background-color: rgb(211, 211, 211);
